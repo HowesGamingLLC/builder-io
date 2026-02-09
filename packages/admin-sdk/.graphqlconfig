@@ -1,0 +1,8 @@
+{
+  "schema": "https://cdn.builder.io/api/v2/admin",
+  "generates": {
+    "src/autogen/client": {
+      "generator": "typescript"
+    }
+  }
+}
