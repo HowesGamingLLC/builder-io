@@ -1,0 +1,4 @@
+{
+  "endpoint": "https://cdn.builder.io/api/v2/admin",
+  "output": "src/autogen/client"
+}
