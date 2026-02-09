@@ -7,7 +7,7 @@ const root = 'https://cdn.builder.io';
 
 export const createAdminApiClient = (privateKey: string) =>
   createClient({
-    fetcher: ({ query, variables }, fetch) =>
+    fetcher: ({ query, variables }: any, fetch: any) =>
       fetch(`${root}/api/v2/admin`, {
         method: 'POST',
         body: JSON.stringify({ query, variables }),
@@ -15,5 +15,5 @@ export const createAdminApiClient = (privateKey: string) =>
           'Content-Type': 'application/json',
           Authorization: `Bearer ${privateKey}`,
         },
-      }).then(r => r.json()),
+      }).then((r: any) => r.json()),
   });
