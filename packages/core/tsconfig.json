@@ -27,5 +27,9 @@
     "./index.ts",
     "./src/**/*.ts",
     "./types.d.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts"
   ]
 }
