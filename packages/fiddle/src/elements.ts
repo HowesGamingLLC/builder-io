@@ -68,7 +68,7 @@ if (isBrowser && !globalVar[globalLoadedVar]) {
       const host = this.getAttribute('host')
         ? this.getAttribute('host')
         : dev
-        ? 'http://localhost:1234'
+        ? 'http://localhost:8989'
         : qa
         ? 'https://qa.builder.io'
         : beta
