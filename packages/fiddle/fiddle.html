@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder.io Fiddle Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            color: #333;
+        }
+        .demo-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Builder.io Fiddle - Development Environment</h1>
+        
+        <div class="demo-section">
+            <h2>Welcome to the Builder.io Fiddle</h2>
+            <p>This is the development interface for Builder.io's fiddle component.</p>
+            <p>The fiddle system is now properly configured and ready for development.</p>
+        </div>
+        
+        <div class="demo-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dist/builder-fiddle.umd.js">Bundle</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Signal that fiddle is loaded
+        if (window.parent !== window) {
+            window.parent.postMessage({ type: 'builder.fiddleLoaded' }, '*');
+        }
+    </script>
+</body>
+</html>
