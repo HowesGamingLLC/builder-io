@@ -75,7 +75,9 @@ if (isBrowser && !globalVar[globalLoadedVar]) {
         ? 'https://beta.builder.io'
         : 'https://builder.io';
 
-      const url = host + '/fiddle' + (entry ? '/' + entry : '') + (view ? '/view' : '');
+      const url = dev
+        ? host + '/fiddle.html'
+        : host + '/fiddle' + (entry ? '/' + entry : '') + (view ? '/view' : '');
 
       iframe.src = url;
       this.appendChild(iframe);
